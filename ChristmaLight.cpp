@@ -18,5 +18,5 @@ void ChristmasLights::initLogging() {
 }
 
 ChristmasLights::~ChristmasLights() {
-    Log.notice("Destroying App Christmas Lights");
+    Log.notice("Destroying App Christmas Lights\n");
 }
