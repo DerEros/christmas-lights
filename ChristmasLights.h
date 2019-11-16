@@ -4,6 +4,7 @@
 class ChristmasLights {
     private:
         virtual void initLogging();
+        virtual void initServices();
 
     public:
         ChristmasLights();

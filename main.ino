@@ -1,3 +1,7 @@
+#include "ChristmasLights.h"
+
+ChristmasLights christmasLights;
+
 void setup() {
 }
 

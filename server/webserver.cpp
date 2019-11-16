@@ -2,8 +2,10 @@
 
 #include "libraries/Arduino-Log/ArduinoLog.h"
 
-Webserver::Webserver() {
+Webserver::Webserver(shared_ptr<Files> filesService) {
     Log.notice("Starting Web Server\n");
+
+    this->filesService = filesService;
 }
 
 Webserver::~Webserver() {
