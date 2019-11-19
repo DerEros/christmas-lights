@@ -29,6 +29,7 @@ class WiFiConfig {
         static unique_ptr<WiFiConfig> defaultConfig();
 
         String getSsid() { return this->ssid; }
+        String getPassword() { return this->password; }
         WiFiMode getWiFiMode() { return this->wifiMode; }
 };
 
