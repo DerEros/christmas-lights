@@ -4,15 +4,17 @@
 #include <memory>
 
 #include "../files/files.h"
+#include "../config/ConfigurationRepo.h"
 
 using namespace std;
 
 class Webserver {
     private: 
         shared_ptr<Files> filesService;
+        shared_ptr<ConfigurationRepo> configRepo;
 
     public:
-        Webserver(shared_ptr<Files> filesService);
+        Webserver(shared_ptr<Files> filesService, shared_ptr<ConfigurationRepo> configRepo);
         virtual ~Webserver();
 };
 
