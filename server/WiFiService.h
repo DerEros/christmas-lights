@@ -16,11 +16,15 @@ class WiFiService {
         bool startAP();
         bool startClient();
 
+        bool stopAP();
+        bool stopClient();
+
     public:
         WiFiService(shared_ptr<ConfigurationRepo> configRepo);
         virtual ~WiFiService();
 
         virtual bool start();
+        virtual bool stop();
 };
 
 #endif /* WIFI_H */

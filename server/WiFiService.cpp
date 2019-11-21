@@ -33,3 +33,22 @@ bool WiFiService::startClient() {
     Log.notice("Starting WiFi in client mode\n");
     return false;
 }
+
+bool WiFiService::stop() {
+    if (this->wifiConfig->getWiFiMode() == WiFiConfig::AP) {
+        return stopAP();
+    } else {
+        return stopClient();
+    }
+}
+
+bool WiFiService::stopAP() {
+    Log.notice("Stopping WiFi in AP mode\n");
+
+    return false;
+}
+
+bool WiFiService::stopClient() {
+    Log.notice("Stopping WiFi in client mode\n");
+    return false;
+}

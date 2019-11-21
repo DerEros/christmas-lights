@@ -9,6 +9,7 @@
 
 #include "files/files.h"
 #include "config/ConfigurationRepo.h"
+#include "server/WiFiService.h"
 #include "server/webserver.h"
 
 using namespace std;
@@ -33,5 +34,8 @@ void ChristmasLights::initServices() {
 
     auto filesService = make_shared<Files>();
     auto configRepo = make_shared<ConfigurationRepo>(filesService);
+    auto wifiService = make_shared<WiFiService>(configRepo);
     auto webserver = make_shared<Webserver>(filesService, configRepo);
+
+
 }
