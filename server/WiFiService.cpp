@@ -1,6 +1,7 @@
 #include "WiFiService.h"
 
 #include <ESP8266WiFi.h>
+#include <ESP8266mDNS.h>
 
 #include "libraries/Arduino-Log/ArduinoLog.h"
 
@@ -32,6 +33,17 @@ bool WiFiService::startAP() {
 bool WiFiService::startClient() {
     Log.notice("Starting WiFi in client mode\n");
     return false;
+}
+
+bool WiFiService::startMDNS() {
+    Log.trace("Starting DNS service\n");
+
+    if (!MDNS.begin(this->hostname)) {
+        Log.notice("Starting DNS service failed\n");
+        return false;
+    }
+
+    return true;
 }
 
 bool WiFiService::stop() {

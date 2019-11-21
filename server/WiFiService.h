@@ -3,6 +3,8 @@
 
 #include <memory>
 
+#include <Arduino.h>
+
 #include "../config/ConfigurationRepo.h"
 #include "../config/WiFiConfig.h"
 
@@ -16,10 +18,14 @@ class WiFiService {
         bool startAP();
         bool startClient();
 
+        bool startMDNS();
+
         bool stopAP();
         bool stopClient();
 
     public:
+        const String hostname = "christmas-esp";
+
         WiFiService(shared_ptr<ConfigurationRepo> configRepo);
         virtual ~WiFiService();
 
