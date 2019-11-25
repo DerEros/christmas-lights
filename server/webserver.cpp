@@ -9,7 +9,7 @@ Webserver::Webserver(shared_ptr<Files> filesService, shared_ptr<ConfigurationRep
     this->filesService = filesService;
     this->configRepo = configRepo;
 
-    server = new ESP8266WebServer(80);
+    server = unique_ptr<ESP8266WebServer>(new ESP8266WebServer(80));
 }
 
 Webserver::~Webserver() {

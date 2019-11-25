@@ -14,7 +14,7 @@ class Webserver {
     private: 
         shared_ptr<Files> filesService;
         shared_ptr<ConfigurationRepo> configRepo;
-        ESP8266WebServer* server;
+        unique_ptr<ESP8266WebServer> server;
 
     public:
         Webserver(shared_ptr<Files> filesService, shared_ptr<ConfigurationRepo> configRepo);
