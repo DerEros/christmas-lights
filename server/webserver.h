@@ -16,6 +16,11 @@ class Webserver {
         shared_ptr<ConfigurationRepo> configRepo;
         unique_ptr<ESP8266WebServer> server;
 
+        void addConfigRoutes();
+
+        void handleReadWifiConfig();
+        void handleWriteWifiConfig();
+
     public:
         Webserver(shared_ptr<Files> filesService, shared_ptr<ConfigurationRepo> configRepo);
         virtual ~Webserver();
