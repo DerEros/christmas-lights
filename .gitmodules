@@ -1,3 +1,6 @@
 [submodule "libraries/Arduino-Log"]
 	path = libraries/Arduino-Log
 	url = https://github.com/thijse/Arduino-Log
+[submodule "libraries/ArduinoJson"]
+	path = libraries/ArduinoJson
+	url = https://github.com/bblanchon/ArduinoJson.git
