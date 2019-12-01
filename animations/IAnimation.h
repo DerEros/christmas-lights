@@ -6,6 +6,7 @@ class IAnimation {
 
     public:
         virtual void nextFrame() = 0;
+        virtual void getAnimationId() = 0;
 };
 
 #endif /* IANIMATION_H */
