@@ -12,6 +12,8 @@
 #include "server/WiFiService.h"
 #include "server/webserver.h"
 
+#include "animations/Conductor.h"
+
 using namespace std;
 
 ChristmasLights::ChristmasLights() {
@@ -37,5 +39,5 @@ void ChristmasLights::initServices() {
     auto wifiService = make_shared<WiFiService>(configRepo);
     auto webserver = make_shared<Webserver>(filesService, configRepo);
 
-
+    auto conductor = make_shared<Conductor>(configRepo);
 }
