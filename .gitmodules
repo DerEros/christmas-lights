@@ -4,3 +4,6 @@
 [submodule "libraries/ArduinoJson"]
 	path = libraries/ArduinoJson
 	url = https://github.com/bblanchon/ArduinoJson.git
+[submodule "libraries/FastLED"]
+	path = libraries/FastLED
+	url = https://github.com/FastLED/FastLED
