@@ -13,8 +13,12 @@
 #include "server/webserver.h"
 
 #include "animations/Conductor.h"
+#include "animations/LedArray.h"
 
 using namespace std;
+
+//TODO: read from config instead of hard coding
+const int NUM_OF_LEDS = 8;
 
 ChristmasLights::ChristmasLights() {
     Serial.begin(SERIAL_SPEED);
@@ -39,5 +43,6 @@ void ChristmasLights::initServices() {
     auto wifiService = make_shared<WiFiService>(configRepo);
     auto webserver = make_shared<Webserver>(filesService, configRepo);
 
+    auto ledArray = make_shared<LedArray>(NUM_OF_LEDS);
     auto conductor = make_shared<Conductor>(configRepo);
 }
