@@ -19,6 +19,7 @@ class ConditionalAnimation : public IAnimation, public ICondition {
 
         virtual void nextFrame() { animation->nextFrame(); }
         virtual bool isTrue() { condition->isTrue(); }
+        virtual String getAnimationId();
 };
 
 #endif /* CONDITIONALANIMATION_H */

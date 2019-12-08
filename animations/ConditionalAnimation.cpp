@@ -4,3 +4,8 @@ ConditionalAnimation::ConditionalAnimation(shared_ptr<IAnimation> animation, sha
     this->animation = animation;
     this->condition = condition;
 }
+
+String ConditionalAnimation::getAnimationId() {
+    //TODO generate unique ID
+    return "foobar";
+}
