@@ -15,6 +15,8 @@ class Conductor {
         shared_ptr<ConfigurationRepo> configRepo;
         vector<ConditionalAnimation> animations;
 
+        void loadAnimations();
+
     public:
         Conductor(shared_ptr<ConfigurationRepo> configRepo);
         virtual ~Conductor();
